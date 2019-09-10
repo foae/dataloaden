@@ -1,19 +1,20 @@
-//go:generate go run github.com/vektah/dataloaden UserSliceLoader int []github.com/vektah/dataloaden/example.User
+//go:generate go run github.com/guiajlopes/dataloaden UserSliceLoader int []github.com/guiajlopes/dataloaden/example.User
 
 package slice
 
 import (
+	"context"
 	"strconv"
 	"time"
 
-	"github.com/vektah/dataloaden/example"
+	"github.com/guiajlopes/dataloaden/example"
 )
 
 func NewLoader() *UserSliceLoader {
 	return &UserSliceLoader{
 		wait:     2 * time.Millisecond,
 		maxBatch: 100,
-		fetch: func(keys []int) ([][]example.User, []error) {
+		fetch: func(ctx context.Context, keys []int) ([][]example.User, []error) {
 			users := make([][]example.User, len(keys))
 			errors := make([]error, len(keys))
 
