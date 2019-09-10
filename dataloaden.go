@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/guiajlopes/dataloaden/pkg/generator"
+	"github.com/foae/dataloaden/pkg/generator"
 )
 
 func main() {

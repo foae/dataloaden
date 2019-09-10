@@ -1,4 +1,4 @@
-//go:generate go run github.com/guiajlopes/dataloaden UserLoader string *github.com/guiajlopes/dataloaden/example.User
+//go:generate go run github.com/foae/dataloaden UserLoader string *github.com/foae/dataloaden/example.User
 
 package example
 

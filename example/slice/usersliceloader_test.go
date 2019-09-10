@@ -3,7 +3,7 @@ package slice
 import (
 	"context"
 	"fmt"
-	"github.com/guiajlopes/dataloaden/example"
+	"github.com/foae/dataloaden/example"
 	"strconv"
 	"sync"
 	"testing"

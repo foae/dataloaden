@@ -1,4 +1,4 @@
-### The DATALOADer gENerator [![CircleCI](https://circleci.com/gh/guiajlopes/dataloaden.svg?style=svg)](https://circleci.com/gh/vektah/dataloaden) [![Go Report Card](https://goreportcard.com/badge/github.com/vektah/dataloaden)](https://goreportcard.com/report/github.com/vektah/dataloaden) [![codecov](https://codecov.io/gh/vektah/dataloaden/branch/master/graph/badge.svg)](https://codecov.io/gh/vektah/dataloaden)
+### The DATALOADer gENerator [![CircleCI](https://circleci.com/gh/foae/dataloaden.svg?style=svg)](https://circleci.com/gh/vektah/dataloaden) [![Go Report Card](https://goreportcard.com/badge/github.com/vektah/dataloaden)](https://goreportcard.com/report/github.com/vektah/dataloaden) [![codecov](https://codecov.io/gh/vektah/dataloaden/branch/master/graph/badge.svg)](https://codecov.io/gh/vektah/dataloaden)
 
 Requires golang 1.11+ for modules support.
 
@@ -12,7 +12,7 @@ get used.
 
 From inside the package you want to have the dataloader in:
 ```bash
-go run github.com/vektah/dataloaden UserLoader string *github.com/dataloaden/example.User
+go run github.com/foae/dataloaden UserLoader string *github.com/dataloaden/example.User
 ```
 
 This will generate a dataloader called `UserLoader` that looks up `*github.com/dataloaden/example.User`'s objects 
@@ -53,7 +53,7 @@ You may want to generate a dataloader that returns slices instead of single valu
 simple go type expression: 
 
 ```bash
-go run github.com/guiajlopes/dataloaden UserSliceLoader string []*github.com/dataloaden/example.User
+go run github.com/foae/dataloaden UserSliceLoader string []*github.com/dataloaden/example.User
 ```
 
 Now each key is expected to return a slice of values and the `fetch` function has the return type `[][]*User`.
@@ -66,12 +66,12 @@ Create a tools.go that looks like this:
 
 package main
 
-import _ "github.com/guiajlopes/dataloaden"
+import _ "github.com/foae/dataloaden"
 ```
 
 This will allow go modules to see the dependency.
 
-You can invoke it from anywhere within your module now using `go run github.com/guiajlopes/dataloaden` and 
+You can invoke it from anywhere within your module now using `go run github.com/foae/dataloaden` and 
 always get the pinned version.
 
 #### Wait, how do I use context with this?
